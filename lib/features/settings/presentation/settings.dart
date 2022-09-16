@@ -30,7 +30,7 @@ class _SettingsPageState extends State<SettingsPage> {
 
   void getPackageInfo() async {
     packageInfo = await PackageInfo.fromPlatform();
-    setState(() {});
+    // setState(() {});
   }
 
   @override
@@ -40,6 +40,7 @@ class _SettingsPageState extends State<SettingsPage> {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: AppColors.kPrimary,
         title: Text(
           'Settings',
           style: context.textTheme.subtitle1,

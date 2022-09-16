@@ -1,4 +1,6 @@
+import 'package:expense_bud/features/account/presentation/account.dart';
 import 'package:expense_bud/features/expense/presentation/expenses.dart';
+import 'package:expense_bud/features/history/presentation/history.dart';
 import 'package:expense_bud/features/insights/presentation/insights.dart';
 import 'package:expense_bud/features/settings/presentation/settings.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +19,10 @@ class AppPage extends StatefulWidget {
 
 class _AppPageState extends State<AppPage> {
   final List<Widget> tabs = const [
+    AccountPage(),
     ExpensesPage(),
-    InsightsPage(),
-    SettingsPage()
+    HistoryPage(),
+    ReportPage(),
   ];
 
   int _currentIndex = 0;
@@ -67,19 +70,24 @@ class _AppPageState extends State<AppPage> {
 
 const _bottomNavigationBarItems = <_Item>[
   _Item(
-    'Home',
-    icon: PhosphorIcons.houseSimple,
-    activeIcon: PhosphorIcons.houseSimpleFill,
+    'Accounts',
+    icon: PhosphorIcons.wallet,
+    activeIcon: PhosphorIcons.walletFill,
   ),
   _Item(
-    'Insights',
-    icon: PhosphorIcons.trendUp,
-    activeIcon: PhosphorIcons.trendUpFill,
+    'Transactions',
+    icon: PhosphorIcons.plusCircleLight,
+    activeIcon: PhosphorIcons.plusCircleFill,
   ),
   _Item(
-    'Settings',
-    icon: PhosphorIcons.nut,
-    activeIcon: PhosphorIcons.nutFill,
+    'History',
+    icon: PhosphorIcons.list,
+    activeIcon: PhosphorIcons.listFill,
+  ),
+  _Item(
+    'Report',
+    icon: PhosphorIcons.chartBar,
+    activeIcon: PhosphorIcons.chartBarFill,
   ),
 ];
 

@@ -15,14 +15,14 @@ import 'package:flutter/material.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:provider/provider.dart';
 
-class InsightsPage extends StatefulWidget {
-  const InsightsPage({Key? key}) : super(key: key);
+class ReportPage extends StatefulWidget {
+  const ReportPage({Key? key}) : super(key: key);
 
   @override
-  _InsightsPageState createState() => _InsightsPageState();
+  _ReportPageState createState() => _ReportPageState();
 }
 
-class _InsightsPageState extends State<InsightsPage> {
+class _ReportPageState extends State<ReportPage> {
   @override
   void initState() {
     super.initState();
